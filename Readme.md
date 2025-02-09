@@ -19,26 +19,39 @@ The trained models weigh too much (>300Mb) so they cannot be uploaded. To create
 
 [Main](Main.py)
 -----------------------
-There is two models, one of them consisting in the sum of two submodels:
+There is three models, one of them consisting in the sum of two submodels:
 - Model(Build dataset) + Model(Road dataset)=='sep'. Two Binary Classification U-net
 - Model(Build dataset + Road dataset)=='uni'. Multiclass U-net
+- Custom_Model(Build dataset) + Custom_Model(Road dataset)=='cus'. Two Binary Classification custom U-net
 
 Results
 -----------------------
 <p float="left">
-  <img src="Img results/sep_23728930_15_result.png" width="45%" />
-  <img src="Img results/uni_23728930_15_result.png" width="45%" />
+  <figure style="display:inline-block; margin-right: 10px;">
+    <img src="Img results/sep_23728930_15_result.png" width="45%" />
+    <figcaption>sep Model</figcaption>
+  </figure>
+  <figure style="display:inline-block;">
+    <img src="Img results/uni_23728930_15_result.png" width="45%" />
+    <figcaption>uni Model</figcaption>
+  </figure>
+</p>
+
+<p float="left">
+  <figure style="display:inline-block;">
+    <img src="Img results/cus_23728930_15_result.png" width="45%" />
+    <figcaption>custom Model</figcaption>
+  </figure>
 </p>
 
 Acknowledgements
 -----------------------
 This dataset is derived from Volodymyr Mnih's original Massachusetts Buildings/Roads Dataset. Massachusetts Roads Dataset & Massachusetts Buildings dataset were introduced in Chapter 6 of his PhD thesis. If you use this dataset for research purposes you should use the following citation in any resulting publications:
-    ``` 
-    @phdthesis{MnihThesis,
-    author = {Volodymyr Mnih},
-    title = {Machine Learning for Aerial Image Labeling},
-    school = {University of Toronto},
-    year = {2013}
-    }
-
-    ``` 
+``` 
+@phdthesis{MnihThesis,
+author = {Volodymyr Mnih},
+title = {Machine Learning for Aerial Image Labeling},
+school = {University of Toronto},
+year = {2013}
+}
+``` 
