@@ -39,35 +39,33 @@ Here you can see the results test for the U-net with segmentation_models and the
 
 <div align="center">
   <p><strong>Unet sep</strong></p>
-  <img src="Img results/sep_23728930_15.png" width="45%">
+  <img src="Img results/sep_23728930_15.png" width="100%">
 </div>
 
 <div align="center">
   <p><strong>Unet Custom</strong></p>
-  <img src="Img results/cus_23728930_15.png" width="45%">
+  <img src="Img results/cus_23728930_15.png" width="100%">
 </div>
 
 <div align="center">
   <p><strong>Unet uni</strong></p>
-  <img src="Img results/uni_23728930_15.png" width="45%">
+  <img src="Img results/uni_23728930_15.png" width="100%">
 </div>
 
 <p float="left">
   <figure style="display:inline-block; margin-right: 10px;">
+  <p><strong>Unet Sep</strong></p>
     <img src="Img results/sep_23728930_15_result.png" width="45%" />
-    <figcaption>Unet sep</figcaption>
   </figure>
   <figure style="display:inline-block;">
+    <p><strong>Unet Uni</strong></p>
     <img src="Img results/uni_23728930_15_result.png" width="45%" />
-    <figcaption>Unet uni</figcaption>
   </figure>
 </p>
 
 <p float="left">
-  <figure style="display:inline-block;">
+  <p><strong>Unet Custom</strong></p>
     <img src="Img results/cus_23728930_15_result.png" width="45%" />
-    <figcaption>Unet Custom</figcaption>
-  </figure>
 </p>
 
 </div>
