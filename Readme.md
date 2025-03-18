@@ -1,4 +1,4 @@
-Deep learning based in U-net architecture for the Massachusetts dataset consisting in segmentation of buildings and roads
+Deep learning based in U-net architecture for the Massachusetts dataset consisting in segmentation of buildings and roads. Comparison between Custom Unet and Unet from segmented models. 
 
 Dataset
 -----------------------
@@ -19,30 +19,58 @@ The trained models weigh too much (>300Mb) so they cannot be uploaded. To create
 
 [Main](Main.py)
 -----------------------
-There is three models, one of them consisting in the sum of two submodels:
-- Model(Build dataset) + Model(Road dataset)=='sep'. Two Binary Classification U-net
-- Model(Build dataset + Road dataset)=='uni'. Multiclass U-net
+There is two models, one of them consisting in the sum of two submodels:
+- Model(Build dataset) + Model(Road dataset)=='sep'. Two Binary Classification U-net with segmentation_models
+- Model(Build dataset + Road dataset)=='uni'. Multiclass U-net with segmentation_models
 - Custom_Model(Build dataset) + Custom_Model(Road dataset)=='cus'. Two Binary Classification custom U-net
 
 Results
 -----------------------
+Here you can see the results test for the U-net with segmentation_models and the custom U-net. Then, other results can be seen of the reconstruction of the prediction of the images using the mixed models explained before; Model(Build dataset) + Model(Road dataset), Model(Build dataset + Road dataset), Custom_Model(Build dataset) + Custom_Model(Road dataset), and that can be used in [Main](Main.py).
+
+<div align="center">
+
+| Model   | F1 (Test) | Accuracy (Test) |
+|:-------:|:----------:|:---------------:|
+| Unet_custom (Roads)    | 0.8423      | 0.9818         |
+| Unet (Roads) | 0.853    | 0.9822          |
+| Unet_custom (Build) | 0.8872     | 0.9319          |
+| Unet (Build) | 0.88     | 0.9268          |
+
+<div align="center">
+  <p><strong>Unet sep</strong></p>
+  <img src="Img results/sep_23728930_15.png" width="45%">
+</div>
+
+<div align="center">
+  <p><strong>Unet Custom</strong></p>
+  <img src="Img results/cus_23728930_15.png" width="45%">
+</div>
+
+<div align="center">
+  <p><strong>Unet uni</strong></p>
+  <img src="Img results/uni_23728930_15.png" width="45%">
+</div>
+
 <p float="left">
   <figure style="display:inline-block; margin-right: 10px;">
     <img src="Img results/sep_23728930_15_result.png" width="45%" />
-    <figcaption>sep Model</figcaption>
+    <figcaption>Unet sep</figcaption>
   </figure>
   <figure style="display:inline-block;">
     <img src="Img results/uni_23728930_15_result.png" width="45%" />
-    <figcaption>uni Model</figcaption>
+    <figcaption>Unet uni</figcaption>
   </figure>
 </p>
 
 <p float="left">
   <figure style="display:inline-block;">
     <img src="Img results/cus_23728930_15_result.png" width="45%" />
-    <figcaption>custom Model</figcaption>
+    <figcaption>Unet Custom</figcaption>
   </figure>
 </p>
+
+</div>
 
 Acknowledgements
 -----------------------
